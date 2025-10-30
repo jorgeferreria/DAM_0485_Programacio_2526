@@ -34,7 +34,13 @@ public class Ex4 {
         }
         System.out.println(numero);
         
-        System.out.println(index);
+        System.out.print("Els divisors de "+numero+" són: ");
+        for (int i = 1; i <= numero / 2; i++) {
+            if (numero % i == 0){
+                System.out.print(i + ", ");
+            }
+        }
+        System.out.println(numero);
     }
     
 }

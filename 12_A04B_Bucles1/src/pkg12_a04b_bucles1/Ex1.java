@@ -11,7 +11,7 @@ public class Ex1 {
         boolean numeroValid = false;
 
         do {
-            System.out.println("Dis-me el total de carbasses trobades: ");
+            System.out.print("Dis-me el total de carbasses trobades: ");
 
             if (sc.hasNextInt()) {
                 totalCarbasses = sc.nextInt();
@@ -34,7 +34,7 @@ public class Ex1 {
                 numeroValid = false;
                 
                 do {
-                    System.out.println("Dis-me el pes de la carbassa "+ (i+1) +": " );
+                    System.out.print("Dis-me el pes de la carbassa "+ (i+1) +": " );
 
                     if (sc.hasNextDouble()) {
                         pes = sc.nextDouble();
@@ -42,7 +42,7 @@ public class Ex1 {
                             numeroValid = true;
                             //suma += pes; // BÉ
                         } else {
-                            System.out.println("Ha de ser un número enter i positiu!");
+                            System.out.println("Ha de ser un número positiu!");
                         }
                     } else {
                         System.out.println("Ha de ser un número!");
@@ -54,7 +54,7 @@ public class Ex1 {
             }
 
             System.out.println("El pes total de les carbasse és: " + pesTotal);
-            System.out.printf("La mitaja de pes és: %.1f\n", pesTotal / totalCarbasses);
+            System.out.printf("El pes mitjà és: %.1f\n", pesTotal / totalCarbasses);
         } else {
             System.out.println("No has trobat cap carbassa");
         }

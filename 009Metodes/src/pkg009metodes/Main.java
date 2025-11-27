@@ -1,21 +1,21 @@
 package pkg009metodes;
 
+import static pkg009metodes.Auxiliar.saludar;
+
 public class Main {
 
     public static void main(String[] args) {
-        String nombre = "Lucia", ciudad = "La llagosta", cadena = "";
-        int edat = 89;
-        
-        cadena = saludar(nombre, ciudad, edat);
-
-        System.out.println(cadena);
-    }
-
-    public static String saludar(String nombre, String ciudad, int edat) {
+        String noms[] = {"Pepe", "Maria", "Alex"};
+        String ciutats[] = {"Montcada", "Sabadell", "Barcelona"};
+        int edats[] = {10, 20, 30};
         String cadena;
-        cadena = "HOLA " + nombre + " vives en " + ciudad 
-                + " y tienes " + edat + " años";
-        return cadena;
+
+        for (int i = 0; i < noms.length; i++) {
+            cadena = saludar(noms[i], ciutats[i], edats[i]);
+            System.out.println(cadena);
+            
+        }
+
     }
 
 }

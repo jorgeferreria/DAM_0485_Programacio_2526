@@ -8,6 +8,7 @@ public class ArrayLists {
     
         // CREACIÓ D'UN ARRAYLIST DE TIPUS STRING, SOLS TIPUS COMPLEXOS (Integer, Double, Boolean, ...)
         ArrayList<String> personas = new ArrayList();
+         ArrayList<String> personas2 = personas; // Copia per referència
         
         // AFEGIR UN ELEMENT
         personas.add("Pepe");

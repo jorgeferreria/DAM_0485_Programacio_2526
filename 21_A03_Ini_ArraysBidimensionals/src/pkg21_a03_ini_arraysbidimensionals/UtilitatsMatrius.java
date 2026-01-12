@@ -5,9 +5,11 @@ import static pkg21_a03_ini_arraysbidimensionals.metodesAuxiliars.demanarValor;
 
 
 public class UtilitatsMatrius {
+    
+    static Scanner sc = new Scanner(System.in);
+    static final int DIMENSION_I = 8, DIMENSION_J = 10;
 
     public static int demanarDimensio() {
-        Scanner sc = new Scanner(System.in);
         int dimensio = 0;
         boolean continuar = true;
 
@@ -26,15 +28,16 @@ public class UtilitatsMatrius {
                 sc.nextLine(); // BUIDAR BUFFER
             }
         } while (continuar);
-
+        
         return dimensio;
     }
 
     public static int[][] emplenarMatriu(int dimensio, int matriuActual) {
+        //int[][] matriu = new int[DIMENSION_I][DIMENSION_J];
         int[][] matriu = new int[dimensio][dimensio];
 
         for (int i = 0; i < matriu.length; i++) {
-            for (int j = 0; j < matriu.length; j++) {
+            for (int j = 0; j < matriu[i].length; j++) {
                 System.out.println("Valor per a la fila " + i + " columna " + j 
                         + " de la matriu " + matriuActual + ": ");
                 matriu[i][j] = demanarValor();
@@ -45,10 +48,11 @@ public class UtilitatsMatrius {
     }
     
     public static int[][] sumarMatrius(int[][] matriu1, int[][] matriu2){
+        sc.nextLine();
         int[][] suma = new int[matriu1.length][matriu1.length];
         
         for (int i = 0; i < suma.length; i++) {
-            for (int j = 0; j < suma.length; j++) {
+            for (int j = 0; j < suma[i].length; j++) {
                 suma[i][j] = matriu1[i][j] + matriu2[i][j];
             }
         }
@@ -64,7 +68,7 @@ public class UtilitatsMatrius {
         }
         
         for (int i = 0; i < matriu.length; i++) {
-            for (int j = 0; j < matriu.length; j++) {
+            for (int j = 0; j < matriu[i].length; j++) {
                 if(j < matriu.length - 1){
                     System.out.print(matriu[i][j] + " ");
                 } else {

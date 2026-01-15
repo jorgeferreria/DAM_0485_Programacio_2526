@@ -22,6 +22,7 @@ public class Main {
         
         Utilitats.compararEdat(edats);
         
+        Utilitats.compararAlsades(noms, alsades);
         
     }
     

@@ -24,18 +24,18 @@ public class Utilitats {
         boolean trobat = false, continuar = true;
 
         if (!edats.isEmpty()) {
-            System.out.print("Dis-me la fila de l'edat a comparar: ");          
+            System.out.print("Dis-me la fila de l'edat a comparar: ");
             do {
-                if(sc.hasNextInt()){
+                if (sc.hasNextInt()) {
                     fila = sc.nextInt();
-                    if(fila >= 0 && fila < edats.size()){
+                    if (fila >= 0 && fila < edats.size()) {
                         continuar = false;
                     } else {
                         System.out.println("Fila no vàlida!");
                     }
                 } else {
                     System.out.println("Ha de ser un enter!");
-                }                
+                }
                 sc.nextLine(); // BUIDAR BUFFER
             } while (continuar);
 
@@ -53,6 +53,27 @@ public class Utilitats {
             System.out.println("No hi han dades!");
         }
 
+    }
+
+    public static void compararAlsades(ArrayList<String> noms, ArrayList<Double> alsades) {
+        ArrayList<Double> alsadesUtilitzades = new ArrayList();
+        boolean impres = false;
+
+        for (int i = 0; i < noms.size() - 1; i++) {
+            if (!alsadesUtilitzades.contains(alsades.get(i))) {
+                for (int j = i + 1; j < noms.size(); j++) {
+                    if (alsades.get(i).equals(alsades.get(j))) {
+                        if (!impres) {
+                            System.out.println(noms.get(i) + " medeix " + alsades.get(i));
+                            alsadesUtilitzades.add(alsades.get(i));
+                            impres = true;
+                        }
+                        System.out.println(noms.get(j) + " medeix " + alsades.get(j));
+                    }
+                }
+                impres = false;
+            }
+        }
     }
 
 }

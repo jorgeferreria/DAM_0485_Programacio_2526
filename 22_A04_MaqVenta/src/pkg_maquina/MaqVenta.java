@@ -1,11 +1,13 @@
 package pkg_maquina;
 
 import java.util.ArrayList;
+import java.util.Random;
 import static pkg_utilitats.GestorEntrada.*;
 import static pkg_utilitats.GestorSortida.*;
 
 public class MaqVenta {
 
+    final static int CANT_MAX = 10;
     static ArrayList<String> productesSenseEstoc = new ArrayList();
     static double recaptacio = 0;
 
@@ -38,6 +40,7 @@ public class MaqVenta {
                 break;
             case 4:
                 System.out.println("4. Recarregar fruita");
+                recaregarFruita(nomProducte, estoc);
                 break;
             case 5:
                 System.out.println("5. Resum d'activitat.");
@@ -52,7 +55,9 @@ public class MaqVenta {
     }
 
     public static void comprarFruita(String[][] nomProducte, double[][] preu, int[][] estoc) {
-        int posicio, posI, posJ;
+        final int PROBABILITAT = 10; // 10
+        Random rnd = new Random();
+        int posicio, posI, posJ, aleatori;
 
         posicio = demanarEnter("Indica el codi de la posició (FilaColumna):");
 
@@ -63,7 +68,7 @@ public class MaqVenta {
             if (posI >= 0 && posI < nomProducte.length
                     && posJ >= 0 && posJ < nomProducte[0].length
                     && estoc[posI][posJ] > 0) {
-
+                
                 estoc[posI][posJ]--;
 
                 if (estoc[posI][posJ] <= 0) {
@@ -71,9 +76,15 @@ public class MaqVenta {
                 }
 
                 recaptacio += preu[posI][posJ];
+                
+                aleatori = rnd.nextInt(PROBABILITAT);
 
-                System.out.printf("** Fruita venuda: %s %.2f€ **\n",
+                if( aleatori == 0){
+                    System.out.println("** Incidència: la màquina no ha lliurat la fruita **");
+                } else {
+                    System.out.printf("** Fruita venuda: %s %.2f€ **\n",
                         nomProducte[posI][posJ], preu[posI][posJ]);
+                }
 
             } else {
                 System.out.println("No hi ha disponibilitat d'aquesta fruita!");
@@ -88,6 +99,48 @@ public class MaqVenta {
         } else {
             System.out.println("Els següents productes s'han esgotat: ");
             mostrarProductesSenseEstoc(productesSenseEstoc);
+        }
+    }
+
+    public static void recaregarFruita(String[][] nomProducte, int[][] estoc) {
+        int posicio, posI, posJ, elements;
+        boolean estocCero = false;
+
+        posicio = demanarEnter("Indica el codi de la posició (FilaColumna):");
+
+        if (posicio >= 0) {
+            posI = posicio / 10;
+            posJ = posicio % 10;
+
+            if (posI >= 0 && posI < estoc.length && posJ >= 0 && posJ < estoc[0].length) {
+                elements = demanarEnter("Quants elements vas a recarregar?");
+
+                if (estoc[posI][posJ] == 0) {
+                    estocCero = true;
+                }
+
+                if (elements > 0) {
+                    if (estoc[posI][posJ] + elements < CANT_MAX) {
+                        estoc[posI][posJ] += elements;
+                    } else {
+                        estoc[posI][posJ] = CANT_MAX;
+                    }
+
+//                    if(productesSenseEstoc.contains(nomProducte[posI][posJ])){
+//                        productesSenseEstoc.remove(productesSenseEstoc.indexOf(nomProducte[posI][posJ]));
+//                    }
+                    if (estocCero) {
+                        productesSenseEstoc.remove(nomProducte[posI][posJ]);
+                    }
+
+                    System.out.println("Quantitat actual: " + estoc[posI][posJ]);
+                } else {
+                    System.out.println("Has de ficar un enter positiu!");
+                }
+
+            } else {
+                System.out.println("Fruita incorrecta!");
+            }
         }
     }
 }

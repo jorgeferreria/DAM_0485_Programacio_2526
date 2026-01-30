@@ -9,7 +9,9 @@ public class MaqVenta {
 
     final static int CANT_MAX = 10;
     static ArrayList<String> productesSenseEstoc = new ArrayList();
+    static Random rnd = new Random();
     static double recaptacio = 0;
+    static int contadorProductesVenuts = 0;
 
     public static void gestioMaquinaVenta(String[][] nomProducte, double[][] preu, int[][] estoc) {
         int opcio;
@@ -56,7 +58,6 @@ public class MaqVenta {
 
     public static void comprarFruita(String[][] nomProducte, double[][] preu, int[][] estoc) {
         final int PROBABILITAT = 10; // 10
-        Random rnd = new Random();
         int posicio, posI, posJ, aleatori;
 
         posicio = demanarEnter("Indica el codi de la posició (FilaColumna):");
@@ -68,7 +69,7 @@ public class MaqVenta {
             if (posI >= 0 && posI < nomProducte.length
                     && posJ >= 0 && posJ < nomProducte[0].length
                     && estoc[posI][posJ] > 0) {
-                
+
                 estoc[posI][posJ]--;
 
                 if (estoc[posI][posJ] <= 0) {
@@ -76,14 +77,24 @@ public class MaqVenta {
                 }
 
                 recaptacio += preu[posI][posJ];
-                
+
                 aleatori = rnd.nextInt(PROBABILITAT);
 
-                if( aleatori == 0){
+                // AMPLIACIÓ 1
+                if (aleatori == 0) {
                     System.out.println("** Incidència: la màquina no ha lliurat la fruita **");
                 } else {
                     System.out.printf("** Fruita venuda: %s %.2f€ **\n",
-                        nomProducte[posI][posJ], preu[posI][posJ]);
+                            nomProducte[posI][posJ], preu[posI][posJ]);
+                    // AMPLIACIÓ 2
+                    contadorProductesVenuts++;
+
+                    //if (contadorProductesVenuts == 10) {
+                    if (contadorProductesVenuts % 2 == 0) {
+                        regalarFruita(nomProducte, estoc, posI, posJ);
+                        //contadorProductesVenuts = 0;
+                    }
+
                 }
 
             } else {
@@ -143,4 +154,40 @@ public class MaqVenta {
             }
         }
     }
+
+    private static void regalarFruita(String[][] nomProducte, int[][] estoc, int posI, int posJ) {
+        int filaRegal = -1, colRegal = -1;
+        boolean regalar = false, continuar = true;
+
+        if (productesSenseEstoc.size() == nomProducte.length * nomProducte[0].length) {
+            System.out.println("Ho sentim molt! No hi ha cap producte disponible per regalar");
+        } else if (productesSenseEstoc.size() == nomProducte.length * nomProducte[0].length - 1
+                && estoc[posI][posJ] != 0) {
+            // SOLS ESTÀ DISPONIBLE EL PRODUCTE VENUT
+            filaRegal = posI;
+            colRegal = posJ;
+            regalar = true;
+        } else {
+
+            do {
+                
+                filaRegal = rnd.nextInt(nomProducte.length);
+                colRegal = rnd.nextInt(nomProducte[0].length);
+                System.out.println(filaRegal + " - " + colRegal);
+                if (filaRegal != posI && colRegal != posJ && estoc[filaRegal][colRegal] > 0) {
+                    regalar = true;
+                    continuar = false;
+                }
+            } while (continuar);
+
+        }
+
+        if (regalar) {
+            estoc[filaRegal][colRegal]--;
+            System.out.println("** Sorpresa! Fruita de regal per la venda número 10: "
+                    + nomProducte[filaRegal][colRegal] + " **");
+        }
+
+    }
+
 }

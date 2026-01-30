@@ -47,7 +47,6 @@ public class GestorSortida {
             System.out.println(productesSenseEstoc.get(i));
         }
         
-        
     }
 
 }

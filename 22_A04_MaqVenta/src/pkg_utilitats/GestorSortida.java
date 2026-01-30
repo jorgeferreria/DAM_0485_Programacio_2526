@@ -5,12 +5,13 @@ import java.util.ArrayList;
 public class GestorSortida {
 
     public static void mostrarMenu() {
-        System.out.println("MÀQUINA VENTA:\n"
-                + "1. Mostrar fruites\n"
-                + "2. Comprar fruita\n"
-                + "3. Mostrar estoc\n"
-                + "4. Recarregar fruita\n"
-                + "5. Sortir");
+        System.out.println(
+            "MÀQUINA VENTA:\n" + 
+            "\t1. Mostrar fruites\n" + 
+            "\t2. Comprar fruita\n" + 
+            "\t3. Mostrar estoc\n" + 
+            "\t4. Recarregar fruita\n" + 
+            "\t5. Sortir");
     }
 
     public static void mostrarFruites(String[][] nomProducte, double[][] preu) {

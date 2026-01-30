@@ -155,7 +155,7 @@ public class MaqVenta {
         }
     }
 
-    private static void regalarFruita(String[][] nomProducte, int[][] estoc, int posI, int posJ) {
+    public static void regalarFruita(String[][] nomProducte, int[][] estoc, int posI, int posJ) {
         int filaRegal = -1, colRegal = -1;
         boolean regalar = false, continuar = true;
 

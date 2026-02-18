@@ -22,6 +22,14 @@ public class Professor extends Persona {
     }
 
     @Override
+    public void irBanyo() {
+        System.out.println("Tengo baño privado y voy!");
+//        super.irBanyo(); 
+    }
+
+    
+    
+    @Override
     public String toString() {
         return super.toString() + ", titulacion=" + titulacion;
     }

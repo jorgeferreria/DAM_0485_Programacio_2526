@@ -34,6 +34,10 @@ public  abstract class Persona {
             this.edat = 0;
         }
     }
+    
+    public void irBanyo(){
+        System.out.println("Voy al baño!!!");
+    }
 
     @Override
     public String toString() {

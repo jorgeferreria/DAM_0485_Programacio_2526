@@ -23,7 +23,6 @@ public class Main {
                 ((Operari) empleat).trabajar();
             }
         }
-
         
         for (Operari operari : operaris) {
             System.out.println(operari);

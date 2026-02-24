@@ -15,7 +15,7 @@ public class Empleat {
     public void setNom(String nom) {
         this.nom = nom;
     }
-
+    
     @Override
     public String toString() {
         return "Empleat{" + "nom=" + nom + '}';

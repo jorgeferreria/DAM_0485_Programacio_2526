@@ -5,10 +5,10 @@ public class Tecnic extends Operari{
     public Tecnic(String nom) {
         super(nom);
     }
-
+    
     @Override
     public void trabajar(){
-        System.out.println("Sóc Tecnic i estic treballant");
+        System.out.println("Sóc Tècnic i estic treballant");
     }
     
     @Override

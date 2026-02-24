@@ -1,6 +1,6 @@
 package pkg42_a01_pràctica01;
 
-public class Oficial extends Operari{
+public class Oficial extends Operari implements Formador{
     
     public Oficial(String nom) {
         super(nom);
@@ -15,6 +15,11 @@ public class Oficial extends Operari{
     public String toString() {
         return "Oficial{" + super.toString() + "}";
     }
+
+    @Override
+    public void ensenya() {
+        System.out.println("Enseño Java a mis trabajadores!!!");
     
+    }
     
 }

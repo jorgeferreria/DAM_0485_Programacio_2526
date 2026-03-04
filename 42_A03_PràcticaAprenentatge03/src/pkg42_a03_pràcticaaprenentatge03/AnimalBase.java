@@ -37,11 +37,13 @@ public abstract class AnimalBase implements Animal {
     }
 
     public void setEnergia(int energia) {
-        if (energia >= 0 && energia <= 100) {
-            this.energia = energia;
-        } else {
-            this.energia = 100;
-        }
+        this.energia = energia >= 0 && energia <= 100 ? energia : 100;
+        
+//        if (energia >= 0 && energia <= 100) {
+//            this.energia = energia;
+//        } else {
+//            this.energia = 100;
+//        }
     }
 
     public int getAumentEnergia() {
@@ -49,11 +51,13 @@ public abstract class AnimalBase implements Animal {
     }
 
     public void setAumentEnergia(int aumentEnergia) {
-        if (aumentEnergia >= 15 && aumentEnergia <= 25) {
-            this.aumentEnergia = aumentEnergia;
-        } else {
-            this.aumentEnergia = 15;
-        }
+        this.aumentEnergia = aumentEnergia >= 15 && aumentEnergia <= 25 ? aumentEnergia : 15 ;
+        
+//        if (aumentEnergia >= 15 && aumentEnergia <= 25) {
+//            this.aumentEnergia = aumentEnergia;
+//        } else {
+//            this.aumentEnergia = 15;
+//        }
     }
 
     public List<String> getAlimentsAceptats() {
@@ -67,7 +71,6 @@ public abstract class AnimalBase implements Animal {
     public void menjar(String aliment) {
         if (alimentsAceptats.contains(aliment)) {
             setEnergia(getEnergia() + aumentEnergia);
-
         }
     }
 

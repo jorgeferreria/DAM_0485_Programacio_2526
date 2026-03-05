@@ -34,8 +34,6 @@ public class TestZoologic {
         
         z.mostrarEstatAnimals();
         
-        
-        
     }
     
 }

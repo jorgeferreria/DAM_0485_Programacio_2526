@@ -1,5 +1,0 @@
-package pkg42_a04_practica4;
-
-public class SenseFruits {
-    
-}

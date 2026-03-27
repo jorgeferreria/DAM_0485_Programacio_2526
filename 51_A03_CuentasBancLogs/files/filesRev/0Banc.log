@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2026-03-27T18:01:57.155119900Z</date>
+  <millis>1774634517155</millis>
+  <nanos>119900</nanos>
+  <sequence>19</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>verSaldo</method>
+  <thread>1</thread>
+  <message>Saldo cuenta1: 500.0</message>
+</record>
+<record>
+  <date>2026-03-27T18:01:57.156576700Z</date>
+  <millis>1774634517156</millis>
+  <nanos>576700</nanos>
+  <sequence>20</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>verSaldo</method>
+  <thread>1</thread>
+  <message>Saldo cuenta2: 1000.0</message>
+</record>
+<record>
+  <date>2026-03-27T18:01:57.158799400Z</date>
+  <millis>1774634517158</millis>
+  <nanos>799400</nanos>
+  <sequence>21</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+<record>
+  <date>2026-03-27T18:02:11.413385700Z</date>
+  <millis>1774634531413</millis>
+  <nanos>385700</nanos>
+  <sequence>22</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>Saliendo del programa...</message>
+</record>
+</log>

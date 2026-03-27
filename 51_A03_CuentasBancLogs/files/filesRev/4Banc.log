@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2026-03-27T15:42:01.801811700Z</date>
+  <millis>1774626121801</millis>
+  <nanos>811700</nanos>
+  <sequence>36</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>verSaldo</method>
+  <thread>1</thread>
+  <message>Saldo cuenta1: 510</message>
+</record>
+<record>
+  <date>2026-03-27T15:42:01.801811700Z</date>
+  <millis>1774626121801</millis>
+  <nanos>811700</nanos>
+  <sequence>37</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>verSaldo</method>
+  <thread>1</thread>
+  <message>Saldo cuenta2: 1.000</message>
+</record>
+<record>
+  <date>2026-03-27T15:42:01.812732100Z</date>
+  <millis>1774626121812</millis>
+  <nanos>732100</nanos>
+  <sequence>38</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+<record>
+  <date>2026-03-27T15:42:06.066941400Z</date>
+  <millis>1774626126066</millis>
+  <nanos>941400</nanos>
+  <sequence>39</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>Saliendo del programa...</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2026-03-27T17:56:24.765072400Z</date>
+  <millis>1774634184765</millis>
+  <nanos>72400</nanos>
+  <sequence>0</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Cuenta creada para Pepe con saldo inicial: 1000.0</message>
+</record>
+<record>
+  <date>2026-03-27T17:56:24.783264200Z</date>
+  <millis>1774634184783</millis>
+  <nanos>264200</nanos>
+  <sequence>1</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Cuenta creada para Maria con saldo inicial: 500.0</message>
+</record>
+<record>
+  <date>2026-03-27T17:56:24.783264200Z</date>
+  <millis>1774634184783</millis>
+  <nanos>264200</nanos>
+  <sequence>2</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+<record>
+  <date>2026-03-27T17:57:30.751820900Z</date>
+  <millis>1774634250751</millis>
+  <nanos>820900</nanos>
+  <sequence>3</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerDeposito</method>
+  <thread>1</thread>
+  <message>Cantidad a depositar:</message>
+</record>
+<record>
+  <date>2026-03-27T17:57:34.279334300Z</date>
+  <millis>1774634254279</millis>
+  <nanos>334300</nanos>
+  <sequence>4</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>WARNING</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>depositar</method>
+  <thread>1</thread>
+  <message>Intento de depósito con cantidad negativa</message>
+</record>
+<record>
+  <date>2026-03-27T17:57:34.280083100Z</date>
+  <millis>1774634254280</millis>
+  <nanos>83100</nanos>
+  <sequence>5</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>WARNING</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerDeposito</method>
+  <thread>1</thread>
+  <message>No puedes ingresar cantidades negativas</message>
+</record>
+<record>
+  <date>2026-03-27T17:57:34.280456500Z</date>
+  <millis>1774634254280</millis>
+  <nanos>456500</nanos>
+  <sequence>6</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+<record>
+  <date>2026-03-27T17:58:20.596569Z</date>
+  <millis>1774634300596</millis>
+  <nanos>569000</nanos>
+  <sequence>7</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerDeposito</method>
+  <thread>1</thread>
+  <message>Cantidad a depositar:</message>
+</record>
+</log>

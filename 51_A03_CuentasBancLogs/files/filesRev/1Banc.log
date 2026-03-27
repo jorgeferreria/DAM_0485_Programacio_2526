@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2026-03-27T18:00:05.037133600Z</date>
+  <millis>1774634405037</millis>
+  <nanos>133600</nanos>
+  <sequence>7</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>WARNING</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>retirar</method>
+  <thread>1</thread>
+  <message>Intento de retiro con cantidad negativa</message>
+</record>
+<record>
+  <date>2026-03-27T18:00:05.038433600Z</date>
+  <millis>1774634405038</millis>
+  <nanos>433600</nanos>
+  <sequence>8</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>SEVERE</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerTransferencia</method>
+  <thread>1</thread>
+  <message>Error en transferencia: No puedes retirar cantidades negativas</message>
+</record>
+<record>
+  <date>2026-03-27T18:00:05.040473700Z</date>
+  <millis>1774634405040</millis>
+  <nanos>473700</nanos>
+  <sequence>9</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+<record>
+  <date>2026-03-27T18:00:43.648730600Z</date>
+  <millis>1774634443648</millis>
+  <nanos>730600</nanos>
+  <sequence>10</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerTransferencia</method>
+  <thread>1</thread>
+  <message>Cantidad a transferir:</message>
+</record>
+<record>
+  <date>2026-03-27T18:00:47.816529700Z</date>
+  <millis>1774634447816</millis>
+  <nanos>529700</nanos>
+  <sequence>11</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>SEVERE</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>retirar</method>
+  <thread>1</thread>
+  <message>Saldo insuficiente para retirar 1500.0</message>
+</record>
+<record>
+  <date>2026-03-27T18:00:47.818660900Z</date>
+  <millis>1774634447818</millis>
+  <nanos>660900</nanos>
+  <sequence>12</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>SEVERE</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerTransferencia</method>
+  <thread>1</thread>
+  <message>Error en transferencia: No tienes saldo suficiente</message>
+</record>
+<record>
+  <date>2026-03-27T18:00:47.819520700Z</date>
+  <millis>1774634447819</millis>
+  <nanos>520700</nanos>
+  <sequence>13</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+<record>
+  <date>2026-03-27T18:01:35.523227300Z</date>
+  <millis>1774634495523</millis>
+  <nanos>227300</nanos>
+  <sequence>14</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>hacerTransferencia</method>
+  <thread>1</thread>
+  <message>Cantidad a transferir:</message>
+</record>
+<record>
+  <date>2026-03-27T18:01:41.434691400Z</date>
+  <millis>1774634501434</millis>
+  <nanos>691400</nanos>
+  <sequence>15</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>retirar</method>
+  <thread>1</thread>
+  <message>Retiro de 500.0. Saldo restante: 500.0</message>
+</record>
+<record>
+  <date>2026-03-27T18:01:41.434691400Z</date>
+  <millis>1774634501434</millis>
+  <nanos>691400</nanos>
+  <sequence>16</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>depositar</method>
+  <thread>1</thread>
+  <message>Depósito de 500.0. Saldo actual: 1000.0</message>
+</record>
+<record>
+  <date>2026-03-27T18:01:41.436130300Z</date>
+  <millis>1774634501436</millis>
+  <nanos>130300</nanos>
+  <sequence>17</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.CuentaBancaria</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.CuentaBancaria</class>
+  <method>transferir</method>
+  <thread>1</thread>
+  <message>Transferencia de 500.0 a Maria</message>
+</record>
+<record>
+  <date>2026-03-27T18:01:41.437203800Z</date>
+  <millis>1774634501437</millis>
+  <nanos>203800</nanos>
+  <sequence>18</sequence>
+  <logger>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</logger>
+  <level>INFO</level>
+  <class>pkg51_a03_cuentasbanclogs.TransaccionesBancarias</class>
+  <method>menu</method>
+  <thread>1</thread>
+  <message>===== MENÚ =====
+1. Depositar
+2. Retirar
+3. Transferir
+4. Ver saldo
+5. Salir
+&gt; </message>
+</record>
+</log>

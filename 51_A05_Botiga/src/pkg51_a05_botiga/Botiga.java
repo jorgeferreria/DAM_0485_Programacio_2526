@@ -2,6 +2,7 @@ package pkg51_a05_botiga;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -41,11 +42,26 @@ public class Botiga {
 
         return eliminat;
     }
+    
+    public List<Joc> eliminarJocsPerCategoria(String categoria){
+        
+        List<Joc> jocsEliminats = new ArrayList();
+        
+        Iterator<Joc> it = jocs.iterator();
+         while(it.hasNext()){
+            Joc joc = it.next();
+            if (joc.getCategoria().equalsIgnoreCase(categoria)){
+                jocsEliminats.add(joc);
+                it.remove();
+            } 
+        }
+        return jocsEliminats;
+    }
 
     public List<Joc> filtrar(String categoria) {
         List<Joc> jocsPerCategoria = new ArrayList();
 
-        if (categoria != null && !categoria.isEmpty()) {
+        if (categoria != null && !categories.isEmpty()) {
             for (Joc joc : jocs) {
                 if (joc.getCategoria().equalsIgnoreCase(categoria)) {
                     jocsPerCategoria.add(joc);

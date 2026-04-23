@@ -22,6 +22,11 @@ public class Main {
         
         b.mostrarJocs();
         
+        
+        b.mostrarJocs(b.eliminarJocsPerCategoria("cat3"));
+        
+        b.mostrarJocs();
+        
     }
     
 }

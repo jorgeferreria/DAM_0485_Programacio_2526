@@ -6,6 +6,12 @@ public class GestioComptesTest {
         
         GestioComptes gc = new GestioComptes();
         
+        int valor = 0;
+        
+        valor = 5;
+        
+        valor = 6;
+        
         Compte c1 = new Compte("1", 100);
         Compte c2 = new Compte("2", 100);
         Compte c3 = new Compte("3", 100);
@@ -17,15 +23,30 @@ public class GestioComptesTest {
         System.out.println(gc.afegir(c2));
         System.out.println(gc.afegir(c3));
         System.out.println(gc.afegir(c4));
-        System.out.println(gc.afegir(c5));
+        System.out.println(gc.afegir(c5));  
         System.out.println(gc.afegir(c6));
         
-        gc.imprimirComptes();
-        
-        gc.esborrarPerSaldo(100);
+        gc.modificar("1");
         
         gc.imprimirComptes();
         
+        gc.saldoMitja();
+        
+        gc.saldoComptes();
+        
+        gc.saldoMajorMenor();
+        
+        System.out.println(gc.esborrarPerSaldo(100));
+        
+        gc.imprimirComptes();
+        
+        gc.saldoMitja();
+        
+        System.out.println(gc.obtenirComptes());
+        
+        gc.saldoComptes();
+        
+        gc.saldoMajorMenor();
         
     }
     

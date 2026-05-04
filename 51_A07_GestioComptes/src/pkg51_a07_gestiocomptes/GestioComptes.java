@@ -65,20 +65,25 @@ public class GestioComptes {
             Compte compte = it.next();
 
             if (compte.getSaldo() == saldo) {
-
+                esborrats.add(compte);
                 it.remove();
-                //comptes.remove(compte.getNumCompte());
-
+                //comptes.remove(compte.getNumCompte()); // MAL
             }
-
         }
 
         return esborrats;
     }
 
     public Set<Compte> obtenirComptes() {
+//        Set<Compte> comptesTotals = new HashSet();
+//                
+//        for (Compte compte : comptes.values()) {
+//            comptesTotals.add(compte);
+//        }
+//        
+//        return comptesTotals;
 
-        return new HashSet<Compte>();
+        return new HashSet(comptes.values());
     }
 
     public void imprimirComptes() {
@@ -97,14 +102,53 @@ public class GestioComptes {
     }
 
     public void saldoComptes() {
+        int positius = 0, negatius = 0, cero = 0;
 
+        for (Compte compte : comptes.values()) {
+            if (compte.getSaldo() > 0) {
+                positius++;
+            } else if (compte.getSaldo() < 0) {
+                negatius++;
+            } else {
+                cero++;
+            }
+        }
+
+        System.out.println("Comptes en Positiu: " + positius);
+        System.out.println("Comptes en Negatiu: " + negatius);
+        System.out.println("Comptes a Cero: " + cero);
     }
 
     public void saldoMitja() {
+        int mitjana = 0;
+
+        for (Compte compte : comptes.values()) {
+            mitjana += compte.getSaldo();
+        }
+
+        System.out.println("El saldo mitja dels comptes és: " + mitjana / comptes.size());
 
     }
 
     public void saldoMajorMenor() {
+
+        String compteMajor = "", compteMenor = "";
+        double saldoMajor = Double.MIN_VALUE, saldoMenor = Double.MAX_VALUE;
+
+        for (Compte compte : comptes.values()) {
+            if (compte.getSaldo() >= saldoMajor) {
+                compteMajor = compte.getNumCompte();
+                saldoMajor = compte.getSaldo();
+            } 
+            
+            if (compte.getSaldo() <= saldoMenor) {
+                compteMenor = compte.getNumCompte();
+                saldoMenor = compte.getSaldo();
+            } 
+        }
+
+        System.out.println("Compte amb MAJOR saldo: " + compteMajor);
+        System.out.println("Compte amb MENOR saldo: " + compteMenor);
 
     }
 

@@ -23,48 +23,67 @@ public class Main {
 
             switch (opcio) {
                 case 1:
-                    boolean registrat = llibreDao.registrar(demanarDadesLlibre());
-                    if (registrat) {
-                        System.out.println("Llibre registrat correctament.");
-                    } else {
-                        System.out.println("Llibre NO registrat.");
+                    try {
+                        boolean registrat = llibreDao.registrar(demanarDadesLlibre());
+                        if (registrat) {
+                            System.out.println("Llibre registrat correctament.");
+                        } else {
+                            System.out.println("Llibre NO registrat.");
+                        }
+                    } catch (RuntimeException re) {
+                        System.out.println("Error: " + re.getMessage());
                     }
+                    
                     break;
 
                 case 2:
-                    List<Llibre> llibres = llibreDao.obtenirTots();
-                    if (llibres.isEmpty()) {
-                        System.out.println("No hi han llibres.");
-                    } else {
-                        System.out.println("LLIBRES:");
-                        for (Llibre llibre : llibres) {
-                            System.out.println(llibre);
+                    try {
+                        List<Llibre> llibres = llibreDao.obtenirTots();
+                        if (llibres.isEmpty()) {
+                            System.out.println("No hi han llibres.");
+                        } else {
+                            System.out.println("LLIBRES:");
+                            for (Llibre llibre : llibres) {
+                                System.out.println(llibre);
+                            }
                         }
+                    } catch (RuntimeException re) {
+                        System.out.println("Error: " + re.getMessage());
                     }
 
                     break;
 
                 case 3:
-                    System.out.print("ID del llibre: ");
-                    int idAct = sc.nextInt();
-                    System.out.print("Noves pàgines: ");
-                    int novesP = sc.nextInt();
-                    boolean actualitzat = llibreDao.actualitzarPagines(idAct, novesP);
-                    if (actualitzat) {
-                        System.out.println("Llibre actualizat correctament.");
-                    } else {
-                        System.out.println("Llibre NO actualizat.");
+                    try {
+                        System.out.print("ID del llibre: ");
+                        int idAct = sc.nextInt();
+                        System.out.print("Noves pàgines: ");
+                        int novesP = sc.nextInt();
+                        boolean actualitzat = llibreDao.actualitzarPagines(idAct, novesP);
+                        if (actualitzat) {
+                            System.out.println("Llibre actualizat correctament.");
+                        } else {
+                            System.out.println("Llibre NO actualizat.");
+                        }
+                    } catch (RuntimeException re) {
+                        System.out.println("Error: " + re.getMessage());
                     }
+
                     break;
 
                 case 4:
-                    Llibre llibreMesLlarg = llibreDao.obtenirMesLlarg();
-                    if (llibreMesLlarg != null) {
-                        System.out.println("LLIBRE MÉS LLARG:");
-                        System.out.println(llibreMesLlarg);
-                    } else {
-                        System.out.println("No hi han llibres.");
+                    try {
+                        Llibre llibreMesLlarg = llibreDao.obtenirMesLlarg();
+                        if (llibreMesLlarg != null) {
+                            System.out.println("LLIBRE MÉS LLARG:");
+                            System.out.println(llibreMesLlarg);
+                        } else {
+                            System.out.println("No hi han llibres.");
+                        }
+                    } catch (RuntimeException re) {
+                        System.out.println("Error: " + re.getMessage());
                     }
+
                     break;
 
             }

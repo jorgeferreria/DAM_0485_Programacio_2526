@@ -1,6 +1,11 @@
 package pkg61_a01_gestiobiblioteca;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class Main {

@@ -65,7 +65,8 @@ public class Main {
 
     public static void insertarRegistre(Persona p) {
         // try-with-resources
-        try (Connection conexion = getConnection(); Statement statement = conexion.createStatement()) {
+        try (Connection conexion = getConnection(); 
+                Statement statement = conexion.createStatement()) {
 
             String sql = "INSERT INTO ejemplo_tabla (nombre, edad) VALUES ('"
                     + p.getNombre() + "', " + p.getEdad() + ")";
@@ -80,7 +81,8 @@ public class Main {
     }
 
     public static void modificarRegiste() {
-        try (Connection conexion = getConnection(); Statement statement = conexion.createStatement()) {
+        try (Connection conexion = getConnection(); 
+                Statement statement = conexion.createStatement()) {
 
             String sql = "UPDATE ejemplo_tabla SET edad = 35 WHERE nombre = 'Juan'";
             int filasActualizadas = statement.executeUpdate(sql);
@@ -92,7 +94,8 @@ public class Main {
     }
 
     public static void elimiarRegistre() {
-        try (Connection conexion = getConnection(); Statement statement = conexion.createStatement()) {
+        try (Connection conexion = getConnection(); 
+                Statement statement = conexion.createStatement()) {
 
             String sql = "DELETE FROM ejemplo_tabla WHERE nombre = 'Juan'";
             int filasEliminadas = statement.executeUpdate(sql);
@@ -119,7 +122,8 @@ public class Main {
     }
 
     public static void mostrarPersones() {
-        try (Connection conexion = getConnection(); Statement statement = conexion.createStatement()) {
+        try (Connection conexion = getConnection(); 
+                Statement statement = conexion.createStatement()) {
 
             String sql = "SELECT * FROM ejemplo_tabla";
             ResultSet resultado = statement.executeQuery(sql);

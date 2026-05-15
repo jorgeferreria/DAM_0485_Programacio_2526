@@ -35,6 +35,7 @@ public class LlibreView {
         
         System.out.print("Pàgines: "); 
         pagines = scanner.nextInt();
+        
         return new Llibre(ISBN, titol, autor, pagines);
     }
 

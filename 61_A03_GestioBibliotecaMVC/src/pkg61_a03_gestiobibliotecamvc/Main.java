@@ -1,4 +1,4 @@
-package pkg61_a03_gestiobibliotecadaomvc;
+package pkg61_a03_gestiobibliotecamvc;
 
 import pkg61_a03_gestiobibliotecadaomvc.controller.LlibreController;
 import pkg61_a03_gestiobibliotecadaomvc.model.dao.LlibreDAO;
